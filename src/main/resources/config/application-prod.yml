@@ -32,10 +32,10 @@ spring:
     livereload:
       enabled: false
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/jhipster
-    username: jhipster
-    password:
+    type: zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://@ec2-54-78-142-10.eu-west-1.compute.amazonaws.com/d3schbp843s4tb
+    username: ovabwbdzlzdzyw
+    password: 77cd8d37beac887b21c5bd61c598bd99e0bcfd74e7abdb62d98140d9dd491d6d
     hikari:
       poolName: Hikari
       auto-commit: false
