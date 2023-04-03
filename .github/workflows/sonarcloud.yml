@@ -57,7 +57,7 @@ jobs:
           MAVEN_OPTS: "-Dmaven.repo.local=$HOME/.m2/repository"
 
       - name: Analyze with SonarCloud
-        uses: SonarSource/sonarcloud-github-action@v1.3.0
+        uses: sonarsource/sonarcloud-github-action@master
         with:
           organization: stecathw
           project: Stecathw_jhipster-3-tiers
