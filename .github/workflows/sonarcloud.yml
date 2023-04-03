@@ -58,7 +58,7 @@ jobs:
           MAVEN_OPTS: "-Dmaven.repo.local=$HOME/.m2/repository"
 
       - name: Analyze with SonarCloud
-        uses: org.sonarsource.scanner.maven:sonar
+        uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
