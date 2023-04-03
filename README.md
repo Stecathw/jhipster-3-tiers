@@ -3,6 +3,7 @@
 This application was generated using JHipster 7.9.3, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v7.9.3](https://www.jhipster.tech/documentation-archive/v7.9.3).
 
 test sonarcloud
+mvn clean verify sonar:sonar -Dsonar.login=81ddc7a29841026a107ab964a88c91214c21dee7 -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=stecathw -Dsonar.projectKey=Stecathw_jhipster-3-tiers
 
 ## Project Structure
 
