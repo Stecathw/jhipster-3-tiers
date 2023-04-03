@@ -1,0 +1,18 @@
+{
+  "changelogDate": "20230328065507",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "force",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Pokemon",
+  "pagination": "infinite-scroll",
+  "readOnly": true,
+  "relationships": [],
+  "service": "no"
+}
