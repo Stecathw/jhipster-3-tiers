@@ -53,12 +53,12 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
+        run: mvn -B package --file pom.xml org.sonarsource.scanner.maven:sonar
         env:
           MAVEN_OPTS: "-Dmaven.repo.local=$HOME/.m2/repository"
 
       - name: Analyze with SonarCloud
-        uses: sonarsource/sonarcloud-github-action@master
+        uses: org.sonarsource.scanner.maven:sonar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
