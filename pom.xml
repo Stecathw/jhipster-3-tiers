@@ -23,6 +23,11 @@
     <!-- jhipster-needle-distribution-management -->
 
     <properties>
+        
+        <!-- sonarcloud -->
+        <sonar.organization>stecathw</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        
         <!-- Build properties -->
         <maven.version>3.2.5</maven.version>
         <java.version>11</java.version>
