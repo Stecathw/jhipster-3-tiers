@@ -50,6 +50,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
+          distribution: 'temurin'
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
@@ -62,4 +63,3 @@ jobs:
           organization: stecathw
           project: Stecathw_jhipster-3-tiers
           token: ${{ secrets.SONAR_TOKEN }}
-
