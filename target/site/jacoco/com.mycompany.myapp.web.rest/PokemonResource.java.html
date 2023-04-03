@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PokemonResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JHipster</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.myapp.web.rest</a> &gt; <span class="el_source">PokemonResource.java</span></div><h1>PokemonResource.java</h1><pre class="source lang-java linenums">package com.mycompany.myapp.web.rest;
+
+import com.mycompany.myapp.domain.Pokemon;
+import com.mycompany.myapp.repository.PokemonRepository;
+import com.mycompany.myapp.web.rest.errors.BadRequestAlertException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import tech.jhipster.web.util.HeaderUtil;
+import tech.jhipster.web.util.PaginationUtil;
+import tech.jhipster.web.util.ResponseUtil;
+
+/**
+ * REST controller for managing {@link com.mycompany.myapp.domain.Pokemon}.
+ */
+@RestController
+@RequestMapping(&quot;/api&quot;)
+@Transactional
+public class PokemonResource {
+
+<span class="nc" id="L34">    private final Logger log = LoggerFactory.getLogger(PokemonResource.class);</span>
+
+    private final PokemonRepository pokemonRepository;
+
+<span class="nc" id="L38">    public PokemonResource(PokemonRepository pokemonRepository) {</span>
+<span class="nc" id="L39">        this.pokemonRepository = pokemonRepository;</span>
+<span class="nc" id="L40">    }</span>
+
+    /**
+     * {@code GET  /pokemon} : get all the pokemon.
+     *
+     * @param pageable the pagination information.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of pokemon in body.
+     */
+    @GetMapping(&quot;/pokemon&quot;)
+    public ResponseEntity&lt;List&lt;Pokemon&gt;&gt; getAllPokemon(@org.springdoc.api.annotations.ParameterObject Pageable pageable) {
+<span class="nc" id="L50">        log.debug(&quot;REST request to get a page of Pokemon&quot;);</span>
+<span class="nc" id="L51">        Page&lt;Pokemon&gt; page = pokemonRepository.findAll(pageable);</span>
+<span class="nc" id="L52">        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);</span>
+<span class="nc" id="L53">        return ResponseEntity.ok().headers(headers).body(page.getContent());</span>
+    }
+
+    /**
+     * {@code GET  /pokemon/:id} : get the &quot;id&quot; pokemon.
+     *
+     * @param id the id of the pokemon to retrieve.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the pokemon, or with status {@code 404 (Not Found)}.
+     */
+    @GetMapping(&quot;/pokemon/{id}&quot;)
+    public ResponseEntity&lt;Pokemon&gt; getPokemon(@PathVariable Long id) {
+<span class="nc" id="L64">        log.debug(&quot;REST request to get Pokemon : {}&quot;, id);</span>
+<span class="nc" id="L65">        Optional&lt;Pokemon&gt; pokemon = pokemonRepository.findById(id);</span>
+<span class="nc" id="L66">        return ResponseUtil.wrapOrNotFound(pokemon);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

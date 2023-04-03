@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="120" failures="0" errors="0" time="18.703">
+  <testsuite name="Health Service" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:03" time="4.433" tests="5">
+    <testcase classname="Health Service transformHealthData should flatten empty health data" name="Health Service transformHealthData should flatten empty health data" time="0.003">
+    </testcase>
+    <testcase classname="Health Service transformHealthData should flatten health data with no subsystems" name="Health Service transformHealthData should flatten health data with no subsystems" time="0.002">
+    </testcase>
+    <testcase classname="Health Service transformHealthData should flatten health data with subsystems at level 1, main system has no additional information" name="Health Service transformHealthData should flatten health data with subsystems at level 1, main system has no additional information" time="0.001">
+    </testcase>
+    <testcase classname="Health Service transformHealthData should flatten health data with subsystems at level 1, main system has additional information" name="Health Service transformHealthData should flatten health data with subsystems at level 1, main system has additional information" time="0.002">
+    </testcase>
+    <testcase classname="Health Service transformHealthData should flatten health data with subsystems at level 1, main system has additional error" name="Health Service transformHealthData should flatten health data with subsystems at level 1, main system has additional error" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Metrics Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:03" time="6.283" tests="2">
+    <testcase classname="Metrics Component refresh should call refresh on init" name="Metrics Component refresh should call refresh on init" time="0.078">
+    </testcase>
+    <testcase classname="Metrics Component isNan should return if a variable is NaN" name="Metrics Component isNan should return if a variable is NaN" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="Register Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:07" time="2.031" tests="6">
+    <testcase classname="Register Component should set all default values correctly" name="Register Component should set all default values correctly" time="0.029">
+    </testcase>
+    <testcase classname="Register Component should open login modal when asked to" name="Register Component should open login modal when asked to" time="0.008">
+    </testcase>
+    <testcase classname="Register Component should register when password match" name="Register Component should register when password match" time="0.016">
+    </testcase>
+    <testcase classname="Register Component should register when password match but throw error when login already exist" name="Register Component should register when password match but throw error when login already exist" time="0.01">
+    </testcase>
+    <testcase classname="Register Component should register when password match but throw error when email already used" name="Register Component should register when password match but throw error when email already used" time="0.011">
+    </testcase>
+    <testcase classname="Register Component should register when password match but throw error" name="Register Component should register when password match but throw error" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="Alert Service test suite" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:09" time="0.366" tests="6">
+    <testcase classname="Alert Service test suite should show error toast with translation/message" name="Alert Service test suite should show error toast with translation/message" time="0.003">
+    </testcase>
+    <testcase classname="Alert Service test suite should show not reachable toast when http status = 0" name="Alert Service test suite should show not reachable toast when http status = 0" time="0">
+    </testcase>
+    <testcase classname="Alert Service test suite should show parameterized error toast when http status = 400 and entity headers" name="Alert Service test suite should show parameterized error toast when http status = 400 and entity headers" time="0.001">
+    </testcase>
+    <testcase classname="Alert Service test suite should show error toast with data.message when http status = 400 and entity headers" name="Alert Service test suite should show error toast with data.message when http status = 400 and entity headers" time="0">
+    </testcase>
+    <testcase classname="Alert Service test suite should show error toast when http status = 404" name="Alert Service test suite should show error toast when http status = 404" time="0.001">
+    </testcase>
+    <testcase classname="Alert Service test suite should show error toast when http status != 400,404" name="Alert Service test suite should show error toast when http status != 400,404" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Account Service test suite" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:09" time="0.766" tests="7">
+    <testcase classname="Account Service test suite should init service and do not retrieve account" name="Account Service test suite should init service and do not retrieve account" time="0.012">
+    </testcase>
+    <testcase classname="Account Service test suite should init service and retrieve profiles if already logged in before but no account found" name="Account Service test suite should init service and retrieve profiles if already logged in before but no account found" time="0.003">
+    </testcase>
+    <testcase classname="Account Service test suite should init service and retrieve profiles if already logged in before but exception occurred and should be logged out" name="Account Service test suite should init service and retrieve profiles if already logged in before but exception occurred and should be logged out" time="0.004">
+    </testcase>
+    <testcase classname="Account Service test suite should init service and check for authority after retrieving account but getAccount failed" name="Account Service test suite should init service and check for authority after retrieving account but getAccount failed" time="0.003">
+    </testcase>
+    <testcase classname="Account Service test suite should init service and check for authority after retrieving account" name="Account Service test suite should init service and check for authority after retrieving account" time="0.007">
+    </testcase>
+    <testcase classname="Account Service test suite should init service as not authentified and not return any authorities admin and not retrieve account" name="Account Service test suite should init service as not authentified and not return any authorities admin and not retrieve account" time="0.006">
+    </testcase>
+    <testcase classname="Account Service test suite should init service as not authentified and return authority user" name="Account Service test suite should init service as not authentified and return authority user" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="Formatter i18n" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:10" time="1.056" tests="14">
+    <testcase classname="Formatter i18n should not abbreviate text shorter than 30 characters" name="Formatter i18n should not abbreviate text shorter than 30 characters" time="0.005">
+    </testcase>
+    <testcase classname="Formatter i18n should abbreviate text longer than 30 characters" name="Formatter i18n should abbreviate text longer than 30 characters" time="0.001">
+    </testcase>
+    <testcase classname="Formatter i18n should retrieve byteSize" name="Formatter i18n should retrieve byteSize" time="0.001">
+    </testcase>
+    <testcase classname="Formatter i18n should clear input entity" name="Formatter i18n should clear input entity" time="0.002">
+    </testcase>
+    <testcase classname="Formatter i18n should open file" name="Formatter i18n should open file" time="0.004">
+    </testcase>
+    <testcase classname="Formatter i18n should check text ends with suffix" name="Formatter i18n should check text ends with suffix" time="0">
+    </testcase>
+    <testcase classname="Formatter i18n should paddingSize to 0" name="Formatter i18n should paddingSize to 0" time="0">
+    </testcase>
+    <testcase classname="Formatter i18n should paddingSize to 1" name="Formatter i18n should paddingSize to 1" time="0.001">
+    </testcase>
+    <testcase classname="Formatter i18n should paddingSize to 2" name="Formatter i18n should paddingSize to 2" time="0.001">
+    </testcase>
+    <testcase classname="Formatter i18n should parse links" name="Formatter i18n should parse links" time="0.002">
+    </testcase>
+    <testcase classname="Formatter i18n should return empty JSON object for empty string" name="Formatter i18n should return empty JSON object for empty string" time="0.001">
+    </testcase>
+    <testcase classname="Formatter i18n should return empty JSON object for text with no link header" name="Formatter i18n should return empty JSON object for text with no link header" time="0.001">
+    </testcase>
+    <testcase classname="Formatter i18n should return empty JSON object for text without &gt;;" name="Formatter i18n should return empty JSON object for text without &gt;;" time="0.001">
+    </testcase>
+    <testcase classname="Formatter i18n should return empty JSON object for text with no comma separated link header" name="Formatter i18n should return empty JSON object for text with no comma separated link header" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="UserManagement Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:10" time="1.737" tests="4">
+    <testcase classname="UserManagement Component OnInit Should call load all on init" name="UserManagement Component OnInit Should call load all on init" time="0.029">
+    </testcase>
+    <testcase classname="UserManagement Component setActive Should update user and call load all" name="UserManagement Component setActive Should update user and call load all" time="0.016">
+    </testcase>
+    <testcase classname="UserManagement Component confirmDelete Should call delete service on confirmDelete" name="UserManagement Component confirmDelete Should call delete service on confirmDelete" time="0.013">
+    </testcase>
+    <testcase classname="UserManagement Component change order should change order and invert reverse" name="UserManagement Component change order should change order and invert reverse" time="0.014">
+    </testcase>
+  </testsuite>
+  <testsuite name="UserManagementEdit Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:11" time="1.701" tests="4">
+    <testcase classname="UserManagementEdit Component init Should load user" name="UserManagementEdit Component init Should load user" time="0.051">
+    </testcase>
+    <testcase classname="UserManagementEdit Component initAuthorities Should load authorities" name="UserManagementEdit Component initAuthorities Should load authorities" time="0.019">
+    </testcase>
+    <testcase classname="UserManagementEdit Component save Should call update service on save for existing user" name="UserManagementEdit Component save Should call update service on save for existing user" time="0.019">
+    </testcase>
+    <testcase classname="UserManagementEdit Component save Should call create service on save for new user" name="UserManagementEdit Component save Should call create service on save for new user" time="0.015">
+    </testcase>
+  </testsuite>
+  <testsuite name="LoginForm Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:12" time="1.177" tests="3">
+    <testcase classname="LoginForm Component should not store token if authentication is KO" name="LoginForm Component should not store token if authentication is KO" time="0.025">
+    </testcase>
+    <testcase classname="LoginForm Component should store token if authentication is OK" name="LoginForm Component should store token if authentication is OK" time="0.017">
+    </testcase>
+    <testcase classname="LoginForm Component should store token if authentication is OK in session" name="LoginForm Component should store token if authentication is OK in session" time="0.012">
+    </testcase>
+  </testsuite>
+  <testsuite name="Error component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:13" time="1.06" tests="7">
+    <testcase classname="Error component should have retrieve custom error on routing" name="Error component should have retrieve custom error on routing" time="0.118">
+    </testcase>
+    <testcase classname="Error component should have set forbidden error on routing" name="Error component should have set forbidden error on routing" time="0.005">
+    </testcase>
+    <testcase classname="Error component should have set not found error on routing" name="Error component should have set not found error on routing" time="0.005">
+    </testcase>
+    <testcase classname="Error component should have retrieve custom error on init" name="Error component should have retrieve custom error on init" time="0.004">
+    </testcase>
+    <testcase classname="Error component should have set forbidden error on init" name="Error component should have set forbidden error on init" time="0.005">
+    </testcase>
+    <testcase classname="Error component should have set not found error on init" name="Error component should have set not found error on init" time="0.004">
+    </testcase>
+    <testcase classname="Error component should have set default on init" name="Error component should have set default on init" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Health Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:13" time="1.051" tests="7">
+    <testcase classname="Health Component baseName and subSystemName should return the basename when it has no sub system" name="Health Component baseName and subSystemName should return the basename when it has no sub system" time="0.018">
+    </testcase>
+    <testcase classname="Health Component baseName and subSystemName should return the basename when it has sub systems" name="Health Component baseName and subSystemName should return the basename when it has sub systems" time="0.005">
+    </testcase>
+    <testcase classname="Health Component baseName and subSystemName should return the sub system name" name="Health Component baseName and subSystemName should return the sub system name" time="0.005">
+    </testcase>
+    <testcase classname="Health Component baseName and subSystemName should return the subsystem when it has multiple keys" name="Health Component baseName and subSystemName should return the subsystem when it has multiple keys" time="0.006">
+    </testcase>
+    <testcase classname="Health Component getBadgeClass should get badge class" name="Health Component getBadgeClass should get badge class" time="0.007">
+    </testcase>
+    <testcase classname="Health Component refresh should call refresh on init" name="Health Component refresh should call refresh on init" time="0.008">
+    </testcase>
+    <testcase classname="Health Component refresh should handle a 503 on refreshing health data" name="Health Component refresh should handle a 503 on refreshing health data" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="Settings Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:14" time="0.869" tests="5">
+    <testcase classname="Settings Component should send the current identity upon save" name="Settings Component should send the current identity upon save" time="0.025">
+    </testcase>
+    <testcase classname="Settings Component should notify of success upon successful save" name="Settings Component should notify of success upon successful save" time="0.008">
+    </testcase>
+    <testcase classname="Settings Component should notify of error upon failed save" name="Settings Component should notify of error upon failed save" time="0.008">
+    </testcase>
+    <testcase classname="Settings Component should notify of error upon error 400" name="Settings Component should notify of error upon error 400" time="0.007">
+    </testcase>
+    <testcase classname="Settings Component should notify of error upon email already used" name="Settings Component should notify of error upon email already used" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="JhiNavbar" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:14" time="1.003" tests="7">
+    <testcase classname="JhiNavbar should not have user data set" name="JhiNavbar should not have user data set" time="0.163">
+    </testcase>
+    <testcase classname="JhiNavbar should have user data set after authentication" name="JhiNavbar should have user data set after authentication" time="0.023">
+    </testcase>
+    <testcase classname="JhiNavbar should have profile info set after info retrieved" name="JhiNavbar should have profile info set after info retrieved" time="0.017">
+    </testcase>
+    <testcase classname="JhiNavbar should use login service" name="JhiNavbar should use login service" time="0.011">
+    </testcase>
+    <testcase classname="JhiNavbar should use account service" name="JhiNavbar should use account service" time="0.012">
+    </testcase>
+    <testcase classname="JhiNavbar logout should clear credentials" name="JhiNavbar logout should clear credentials" time="0.027">
+    </testcase>
+    <testcase classname="JhiNavbar should determine active route" name="JhiNavbar should determine active route" time="0.022">
+    </testcase>
+  </testsuite>
+  <testsuite name="ChangePassword Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:15" time="0.905" tests="3">
+    <testcase classname="ChangePassword Component should show error if passwords do not match" name="ChangePassword Component should show error if passwords do not match" time="0.025">
+    </testcase>
+    <testcase classname="ChangePassword Component should call Auth.changePassword when passwords match and  set success to OK upon success" name="ChangePassword Component should call Auth.changePassword when passwords match and  set success to OK upon success" time="0.011">
+    </testcase>
+    <testcase classname="ChangePassword Component should notify of error if change password fails" name="ChangePassword Component should notify of error if change password fails" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="Configuration Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:15" time="1.033" tests="4">
+    <testcase classname="Configuration Component OnRouteEnter should set all default values correctly" name="Configuration Component OnRouteEnter should set all default values correctly" time="0.017">
+    </testcase>
+    <testcase classname="Configuration Component OnRouteEnter Should call load all on init" name="Configuration Component OnRouteEnter Should call load all on init" time="0.006">
+    </testcase>
+    <testcase classname="Configuration Component keys method should return the keys of an Object" name="Configuration Component keys method should return the keys of an Object" time="0.005">
+    </testcase>
+    <testcase classname="Configuration Component changeOrder function should change order" name="Configuration Component changeOrder function should change order" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="Health Modal Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:16" time="0.688" tests="6">
+    <testcase classname="Health Modal Component baseName and subSystemName should use healthService" name="Health Modal Component baseName and subSystemName should use healthService" time="0.008">
+    </testcase>
+    <testcase classname="Health Modal Component baseName and subSystemName should use healthService" name="Health Modal Component baseName and subSystemName should use healthService" time="0.002">
+    </testcase>
+    <testcase classname="Health Modal Component readableValue should transform data to string when is an object" name="Health Modal Component readableValue should transform data to string when is an object" time="0.001">
+    </testcase>
+    <testcase classname="Health Modal Component readableValue should transform data to string when is a string" name="Health Modal Component readableValue should transform data to string when is a string" time="0.001">
+    </testcase>
+    <testcase classname="Health Modal Component for diskSpace readableValue should transform data to GB when needed" name="Health Modal Component for diskSpace readableValue should transform data to GB when needed" time="0.002">
+    </testcase>
+    <testcase classname="Health Modal Component for diskSpace readableValue should transform data to MB when needed" name="Health Modal Component for diskSpace readableValue should transform data to MB when needed" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Metrics Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:16" time="0.57" tests="6">
+    <testcase classname="Metrics Component init should count the numbers of each thread type" name="Metrics Component init should count the numbers of each thread type" time="0.027">
+    </testcase>
+    <testcase classname="Metrics Component getBadgeClass should return badge-success for RUNNABLE" name="Metrics Component getBadgeClass should return badge-success for RUNNABLE" time="0.003">
+    </testcase>
+    <testcase classname="Metrics Component getBadgeClass should return badge-info for WAITING" name="Metrics Component getBadgeClass should return badge-info for WAITING" time="0.003">
+    </testcase>
+    <testcase classname="Metrics Component getBadgeClass should return badge-warning for TIMED_WAITING" name="Metrics Component getBadgeClass should return badge-warning for TIMED_WAITING" time="0.002">
+    </testcase>
+    <testcase classname="Metrics Component getBadgeClass should return badge-danger for BLOCKED" name="Metrics Component getBadgeClass should return badge-danger for BLOCKED" time="0.005">
+    </testcase>
+    <testcase classname="Metrics Component getBadgeClass should return undefined for anything else" name="Metrics Component getBadgeClass should return undefined for anything else" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="UserManagementView Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:16" time="0.805" tests="1">
+    <testcase classname="UserManagementView Component OnInit Should call load all on init" name="UserManagementView Component OnInit Should call load all on init" time="0.021">
+    </testcase>
+  </testsuite>
+  <testsuite name="Axios interceptor" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:17" time="0.55" tests="5">
+    <testcase classname="Axios interceptor should use localStorage to provide bearer" name="Axios interceptor should use localStorage to provide bearer" time="0.002">
+    </testcase>
+    <testcase classname="Axios interceptor should use sessionStorage to provide bearer" name="Axios interceptor should use sessionStorage to provide bearer" time="0.001">
+    </testcase>
+    <testcase classname="Axios errors interceptor should use callback on 401, 403 errors" name="Axios errors interceptor should use callback on 401, 403 errors" time="0.005">
+    </testcase>
+    <testcase classname="Axios errors interceptor should use callback 50x errors" name="Axios errors interceptor should use callback 50x errors" time="0.001">
+    </testcase>
+    <testcase classname="Axios errors interceptor should not use callback for errors different 50x, 401, 403" name="Axios errors interceptor should not use callback for errors different 50x, 401, 403" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Logs Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:17" time="1.004" tests="4">
+    <testcase classname="Logs Component OnInit should set all default values correctly" name="Logs Component OnInit should set all default values correctly" time="0.024">
+    </testcase>
+    <testcase classname="Logs Component OnInit Should call load all on init" name="Logs Component OnInit Should call load all on init" time="0.008">
+    </testcase>
+    <testcase classname="Logs Component change log level should change log level correctly" name="Logs Component change log level should change log level correctly" time="0.006">
+    </testcase>
+    <testcase classname="Logs Component change order should change order and invert reverse" name="Logs Component change order should change order and invert reverse" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="Activate Component" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:18" time="0.82" tests="3">
+    <testcase classname="Activate Component should display error when activation fails using route" name="Activate Component should display error when activation fails using route" time="0.011">
+    </testcase>
+    <testcase classname="Activate Component should display error when activation fails" name="Activate Component should display error when activation fails" time="0.003">
+    </testcase>
+    <testcase classname="Activate Component should display success when activation succeeds" name="Activate Component should display success when activation succeeds" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="Reset Component Finish" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:18" time="0.762" tests="2">
+    <testcase classname="Reset Component Finish should reset finish be a success" name="Reset Component Finish should reset finish be a success" time="0.022">
+    </testcase>
+    <testcase classname="Reset Component Finish should reset request fail as an error" name="Reset Component Finish should reset request fail as an error" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="Ribbon" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:19" time="0.594" tests="3">
+    <testcase classname="Ribbon should not have ribbonEnabled when no data" name="Ribbon should not have ribbonEnabled when no data" time="0.012">
+    </testcase>
+    <testcase classname="Ribbon should have ribbonEnabled set to value in store" name="Ribbon should have ribbonEnabled set to value in store" time="0.003">
+    </testcase>
+    <testcase classname="Ribbon should not have ribbonEnabled when profile not activated" name="Ribbon should not have ribbonEnabled when profile not activated" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Reset Component Init" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:19" time="0.784" tests="2">
+    <testcase classname="Reset Component Init should reset request be a success" name="Reset Component Init should reset request be a success" time="0.019">
+    </testcase>
+    <testcase classname="Reset Component Init should reset request fail as an error" name="Reset Component Init should reset request fail as an error" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="Sort" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:19" time="0.19" tests="1">
+    <testcase classname="Sort should return an empty string if there is no pagination" name="Sort should return an empty string if there is no pagination" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Home" errors="0" failures="0" skipped="0" timestamp="2023-03-27T14:44:19" time="0.464" tests="3">
+    <testcase classname="Home should not have user data set" name="Home should not have user data set" time="0.013">
+    </testcase>
+    <testcase classname="Home should have user data set after authentication" name="Home should have user data set after authentication" time="0.009">
+    </testcase>
+    <testcase classname="Home should use login service" name="Home should use login service" time="0.003">
+    </testcase>
+  </testsuite>
+</testsuites>
